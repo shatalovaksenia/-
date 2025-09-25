@@ -10,7 +10,7 @@ class TerminalEmulator:
         self.current_dir = os.getcwd()
         
     def setup_window(self):
-        username = os.getenv('USER') or 'user'
+        username = os.getlogin() or 'user'
         hostname = os.getenv('COMPUTERNAME') or 'localhost'
         self.root.title(f"Эмулятор - [{username}@{hostname}]")
         self.root.geometry("700x500")
