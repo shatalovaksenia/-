@@ -166,25 +166,6 @@ print(f"VFS путь: {args.vfs_path}")
 print(f"Скрипт: {args.script}")
 print("========================")
 
-if args.script:
-    print(f"\nВыполнение скрипта {args.script}:")
-    try:
-        with open(args.script, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("#"):
-                    continue
-                print(get_prompt() + line)
-                result = act(line)
-                if result:
-                    print(result)
-    except FileNotFoundError:
-        print(f"Ошибка: скрипт {args.script} не найден")
-    except Exception as e:
-        print(f"Ошибка выполнения скрипта: {e}")
-
-    print("\nСкрипт выполнен. Переход в интерактивный режим.\n")
-
 root = tk.Tk()
 app = TerminalEmulator(root, vfs_path=args.vfs_path, startup_script=args.script)
 root.mainloop()
