@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <packageName>example-package</packageName>
+    <repositoryUrl>https://example.com/repository</repositoryUrl>
+    <testRepositoryMode>false</testRepositoryMode>
+    <testRepositoryPath>/path/to/test/repo</testRepositoryPath>
+    <outputFileName>dependency_graph.png</outputFileName>
+    <asciiTreeMode>true</asciiTreeMode>
+</config>
