@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <packageName>example-package</packageName>
-    <repositoryUrl>https://example.com/repository</repositoryUrl>
+    <packageName>nginx</packageName>
+    <repositoryUrl>https://dl-cdn.alpinelinux.org/alpine/v3.18/main</repositoryUrl>
     <testRepositoryMode>false</testRepositoryMode>
-    <testRepositoryPath>/path/to/test/repo</testRepositoryPath>
-    <outputFileName>dependency_graph.png</outputFileName>
+    <outputImage>dependencies.svg</outputImage>
     <asciiTreeMode>true</asciiTreeMode>
+    <graphFormat>svg</graphFormat>
 </config>

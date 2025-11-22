@@ -1,0 +1,48 @@
+digraph G {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=lightblue];
+    edge [color=darkgreen];
+    graph [bgcolor=white];
+
+    // Основной пакет: nginx
+    "nginx" [fillcolor=orange, fontsize=14, fontname="Arial Bold"];
+
+    "nginx" -> "pcre";
+    "nginx" -> "openssl";
+    "nginx" -> "zlib";
+    "nginx" -> "musl";
+    "nginx" -> "libcrypto1.1";
+    "nginx" -> "libssl1.1";
+
+    // Рекурсивные зависимости
+    "openssl" -> "libcrypto1.1";
+    "openssl" -> "libssl1.1";
+    "openssl" -> "musl";
+    "pcre" -> "musl";
+    "zlib" -> "musl";
+    "libffi" -> "musl";
+    "gdbm" -> "musl";
+    "sqlite-libs" -> "musl";
+    "readline" -> "musl";
+    "readline" -> "ncurses";
+    "libxml2" -> "musl";
+    "libxml2" -> "zlib";
+    "icu" -> "musl";
+    "libgcc" -> "musl";
+    "libstdc++" -> "musl";
+    "libstdc++" -> "libgcc";
+    "c-ares" -> "musl";
+    "device-mapper-libs" -> "musl";
+    "libseccomp" -> "musl";
+    "runc" -> "musl";
+    "openssh-client" -> "musl";
+    "openssh-client" -> "openssl";
+    "openssh-client" -> "zlib";
+    "curl" -> "musl";
+    "curl" -> "openssl";
+    "curl" -> "zlib";
+    "expat" -> "musl";
+    "pcre2" -> "musl";
+    "ncurses" -> "musl";
+    "gpm-libs" -> "musl";
+}
