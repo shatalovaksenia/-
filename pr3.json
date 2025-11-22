@@ -1,0 +1,28 @@
+[
+    {
+        "op": "const",
+        "value": -24,
+        "adress": 0
+    },
+    {
+        "op": "read",
+        "adressB": 0,
+        "adressC": 1
+    },
+    {
+        "op": "write",
+        "adressB": 0,
+        "adressC": 1
+    },
+        {
+        "op": "const",
+        "value": 1,
+        "adress": 2
+    },
+    {
+        "op": "negate",
+        "shift": 0,
+        "adressC": 1,
+        "adressD": 2
+    }
+]
