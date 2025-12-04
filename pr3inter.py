@@ -9,13 +9,24 @@ def execute(program):
             const = args[0]
             adressC = args[1]
             mem[adressC] = const
-        if op == "negate":
+            
+        elif op == "negate":
             shift = args[0]
             adressC = args[1]
             adressD = args[2]
             adress = mem[adressC] + shift
-            op = mem[adress]
-            mem[mem[adressD]] = -op
+            value = mem[adress]
+            mem[mem[adressD]] = -value
+            
+        elif op == "read":
+            adressB = args[0]
+            adressC = args[1]
+            mem[adressC] = mem[adressB]
+            
+        elif op == "write":
+            adressB = args[0]
+            adressC = args[1]
+            mem[adressB] = mem[adressC]
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--path", "-p", help="Путь к файлу с промежуточным представлением")
